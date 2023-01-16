@@ -3,7 +3,8 @@ def solution(number, limit, power):
     for i in range(1,number+1):
         count = 0
         if i == 1:
-            count = 1
+            answer += 1
+            continue
         else:
             for j in range(1,int(i**(1/2))+1):
                 if i%j == 0 :
