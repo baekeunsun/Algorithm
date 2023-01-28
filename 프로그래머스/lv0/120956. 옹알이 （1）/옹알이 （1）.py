@@ -10,20 +10,17 @@ def solution(babbling):
                         continue
                     answer += 1
                     break
-                else :
-                    break
-            else :
                 break
-        continue
+            break
     return answer
 
 
 def solution(babbling):
-    c = 0
-    for b in babbling:
-        for w in [ "aya", "ye", "woo", "ma" ]:
-            if w * 2 not in b:
-                b = b.replace(w, ' ')
-        if len(b.strip()) == 0:
-            c += 1
-    return c
+    answer = 0
+    for now in babbling:
+        for word in [ "aya", "ye", "woo", "ma" ]:
+            if word * 2 not in now:
+                now = now.replace(word, ' ',1)
+        if len(now.strip()) == 0:
+            answer += 1
+    return answer
