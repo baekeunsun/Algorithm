@@ -5,21 +5,15 @@ def report_processing(id_list, report): # 신고 횟수(len), 나를 신고한�
         reportList[reportTo].add(reportFrom)
     return reportList
 
-def stop(reportList,k):
-    stopList =[]
+def stop(reportList,k,id_list):
+    answerList = dict.fromkeys(id_list,0)
     for nowReport in reportList:
         if len(reportList[nowReport]) >= k : # 신고 당한 횟수가 k 이상이면
-            stopList.append(nowReport)
-    return stopList
-
-def answer(stopList,id_list,reportList):
-    answerList = dict.fromkeys(id_list,0)
-    for target in stopList :
-        for i in reportList[target]:
-            answerList[i] += 1
+            for i in reportList[nowReport]:
+                answerList[i] += 1
     return list(answerList.values())
+
 
 def solution(id_list, report, k):
     reportList = report_processing(id_list,report)
-    stopList = stop(reportList,k)
-    return answer(stopList,id_list,reportList)
+    return stop(reportList,k,id_list)
