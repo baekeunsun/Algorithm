@@ -1,24 +1,27 @@
+# 운동
 import sys
 input = sys.stdin.readline
-V, E = map(int, input().split())
 
+V, E = map(int,input().split(' '))
 INF = sys.maxsize
-arr = [[INF for _ in range(V)] for _ in range(V)]
+town = list(list(INF for _ in range(V+1)) for _ in range(V+1))
+
 
 for _ in range(E):
-    i, j, c = map(int, input().split())
-    arr[i-1][j-1] = c
+    a,b,c = map(int,input().split(' '))
+    town[a][b] = c
 
-for k in range(V):
-    for i in range(V):
-        for j in range(V):
-            arr[i][j] = min(arr[i][j], arr[i][k] + arr[k][j])
+for k in range(1,V+1):
+    for i in range(1,V+1):
+        for j in range(1,V+1):
+            town[i][j] = min(town[i][j], town[i][k]+town[k][j])
 
-result = INF
-for i in range(V):
-    result = min(result, arr[i][i])
 
-if result == INF:
+answer = INF
+for v in range(1,V+1):
+    answer = min(answer, town[v][v])
+
+if answer == INF :
     print(-1)
-else:
-    print(result)
+else :
+    print(answer)
