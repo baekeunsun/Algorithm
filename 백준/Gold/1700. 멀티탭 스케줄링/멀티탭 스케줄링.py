@@ -1,6 +1,4 @@
 # 멀티탭 스케줄링
-import heapq
-
 N, K = map(int,input().split(' '))
 use = list(map(int,input().split(' ')))
 code = []
