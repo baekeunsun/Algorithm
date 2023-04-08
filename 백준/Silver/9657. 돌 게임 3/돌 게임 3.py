@@ -7,4 +7,7 @@ for i in range(5,N+1):
         else :
             dp.append(1)
 
-print("CSYK"[dp[N]::2])
+if dp[N] == 1 :
+    print("SK")
+else :
+    print("CY")
