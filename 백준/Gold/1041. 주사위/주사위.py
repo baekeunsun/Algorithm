@@ -1,7 +1,6 @@
 # 주사위
 N = int(input())
 dice = list(map(int,input().split(' ')))
-square = N*N*5
 answer = 0
 
 if N == 1 :
@@ -16,12 +15,10 @@ else :
 
     # 3면이 모두 보이는 경우
     answer += 4*sum(pair)
-    square -= 4*3
 
     # 2면이 모두 보이는 경우
     answer += (8*N-12)*sum(pair[:2])
-    square -= (8*N-12)*2
     
     # 1면만 보이는 경우
-    answer += square*pair[0]
+    answer += (4*(N-2) + 5*(N-2)**2)*pair[0]
     print(answer)
