@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-dp = list(0 for _ in range(N+2))
+dp = list(0 for _ in range(N+1))
 
 for now in range(N):
     T,P = map(int,input().split(' '))
@@ -12,4 +12,4 @@ for now in range(N):
     if now + T < N+1 :
         dp[now+T] = max(dp[now+T],dp[now]+P)
 
-print(max(dp))
+print(dp[-1])
