@@ -6,8 +6,9 @@ length = len(bomb)
 
 for char in string:
     stack.append(char)
-    if char == bomb[-1] and ''.join(stack[-length:]) == bomb:
-        del stack[-length:]
+    if char == bomb[-1] :
+        if ''.join(stack[-length:]) == bomb:
+            del stack[-length:]
     
 if not stack :
     print("FRULA")
