@@ -1,17 +1,14 @@
-import sys
+# 토마토
 from collections import deque
-input = sys.stdin.readline
-
 
 def bfs(M, N, box):
     dx = [1, -1, 0, 0]
     dy = [0, 0, -1, 1]
-
     days = -1
 
     while ripe:
         days += 1
-        for _ in range(len(ripe)):
+        for _ in range(len(ripe)):  # 하루
             x, y = ripe.popleft()
 
             for i in range(4):
@@ -21,7 +18,7 @@ def bfs(M, N, box):
                 if 0 <= nx < N and 0 <= ny < M and box[nx][ny] == 0:
                     box[nx][ny] = box[x][y] + 1
                     ripe.append([nx, ny])
-
+                
     for b in box:
         if 0 in b:
             return -1
@@ -29,13 +26,14 @@ def bfs(M, N, box):
 
 
 M, N = map(int, input().split())
-box, ripe = [], deque()
+box = list()
+ripe = deque()
+
 for i in range(N):
     row = list(map(int, input().split()))
     for j in range(M):
         if row[j] == 1:
             ripe.append([i, j])
     box.append(row)
-
-
+    
 print(bfs(M, N, box))
