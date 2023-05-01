@@ -6,8 +6,7 @@ know = list(map(int,input().split()))
 meet = list({0} for _ in range(N+1))
 party = []
 
-if len(know) > 1 :
-    know = know[1:]
+know.pop(0)
 
 for i in range(M):
     tmp = list(map(int,input().split()))
