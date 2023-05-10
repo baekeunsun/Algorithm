@@ -11,11 +11,7 @@ for i in range(1,M+1):
     farm[t] += r
     total += r
     if total > K :
-        tmp = 0
-        for j in range(N,0,-1):
-            tmp += farm[j]
-            if tmp > K :
-                print(i, j)
-                sys.exit()
+        print(i,1)
+        sys.exit()
     
 print(-1)
