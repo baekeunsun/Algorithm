@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 110484 KB, 시간: 2016 ms
+메모리: 110484 KB, 시간: 1868 ms
 
 ### 분류
 
@@ -42,9 +42,9 @@
 
 ### 입력 
 
- <p>첫째 줄에 심사위원들이 나눠놓은 구역(격자)의 세로 길이 $N$, 가로 길이 $M$이 공백과 함께 주어진다.</p>
+ <p>첫째 줄에 심사위원들이 나눠놓은 구역(격자)의 세로 길이 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>, 가로 길이 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$M$</span></mjx-container>이 공백과 함께 주어진다.</p>
 
-<p>두 번째 줄부터 $N+1$번째 줄까지, 각 칸에 해당하는 점수가 한 줄에 한 행씩 공백과 함께 주어진다.</p>
+<p>두 번째 줄부터 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi><mo>+</mo><mn>1</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N+1$</span></mjx-container>번째 줄까지, 각 칸에 해당하는 점수가 한 줄에 한 행씩 공백과 함께 주어진다.</p>
 
 ### 출력 
 

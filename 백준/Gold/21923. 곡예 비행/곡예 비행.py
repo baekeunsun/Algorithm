@@ -4,7 +4,7 @@ input = sys.stdin.readline
  
 N, M = map(int, input().split())
 Map = [list(map(int, input().split())) for _ in range(N)]
-dp = [[-sys.maxsize] * (M) for _ in range(N)]
+dp = [[-10000000001] * (M) for _ in range(N)]
 dp[N-1][0] = 0
 
 # 상승
