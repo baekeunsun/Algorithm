@@ -6,12 +6,12 @@ input=sys.stdin.readline
 
 L, C = map(int,input().split())
 string = sorted(input().split())
-answer = []
+words = combinations(string, L)
 
-for word in (combinations(string, L)):
+for word in words :
     count = 0
     for w in word :
         if w in 'aeiou' :
             count += 1
     if count >= 1 and (L-count) >= 2 :
-        print(*list(word), sep='')
+        print(''.join(word))
