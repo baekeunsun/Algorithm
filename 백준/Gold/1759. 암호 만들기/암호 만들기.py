@@ -9,7 +9,7 @@ ja = []
 mo = []
 
 for i in string :
-    if i in ['a','e','i','o','u'] :
+    if i in 'aeiou' :
         ja.append(i)
     else :
         mo.append(i)
