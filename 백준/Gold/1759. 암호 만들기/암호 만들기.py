@@ -5,7 +5,7 @@ import sys
 input=sys.stdin.readline
 
 L, C = map(int,input().split())
-string = sorted(list(map(str,input().split())))
+string = sorted(input().split())
 answer = []
 
 for word in (combinations(string, L)):
