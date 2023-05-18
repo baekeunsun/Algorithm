@@ -21,7 +21,7 @@ min_count = 0
 min_num = sys.maxsize
 
 for i in range(1,H+1):
-    tmp = up[H-i+1] + down[i]
+    tmp = up[i] + down[H-i+1]
     if min_num == tmp :
         min_count += 1
         continue
