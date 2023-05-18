@@ -5,7 +5,7 @@ def solution(cap, n, deliveries, pickups):
         i = n-1
         return_list = []
 
-        while i > -1:
+        while i >= 0:
             if target_list[i] == 0 :
                 i -= 1
                 continue
@@ -30,11 +30,9 @@ def solution(cap, n, deliveries, pickups):
         return return_list
 
     answer = 0
-    deliver_list = sol(deliveries)
-    pickup_list = sol(pickups)
+    deliver_list = sorted(sol(deliveries))
+    pickup_list = sorted(sol(pickups))
     
-    deliver_list.sort()
-    pickup_list.sort()
     
     while deliver_list or pickup_list :
         if deliver_list :
