@@ -1,0 +1,28 @@
+WITH AdjustedFish AS (
+    SELECT
+        FISH_TYPE,
+        COALESCE(LENGTH, 10) AS ADJUSTED_LENGTH
+    FROM
+        FISH_INFO
+),
+FishStats AS (
+    SELECT
+        FISH_TYPE,
+        COUNT(*) AS FISH_COUNT,
+        MAX(ADJUSTED_LENGTH) AS MAX_LENGTH,
+        AVG(ADJUSTED_LENGTH) AS AVG_LENGTH
+    FROM
+        AdjustedFish
+    GROUP BY
+        FISH_TYPE
+)
+SELECT
+    FISH_COUNT,
+    MAX_LENGTH,
+    FISH_TYPE
+FROM
+    FishStats
+WHERE
+    AVG_LENGTH >= 33
+ORDER BY
+    FISH_TYPE;
